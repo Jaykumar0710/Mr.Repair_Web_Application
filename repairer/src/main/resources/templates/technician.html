@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technicians</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('/img/shapes-light.png'); /* Path to your background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .content-section {
+            padding: 50px 0;
+            background-color: #fff;
+            margin-top: 95px; /* Add margin to separate from navbar */
+        }
+
+        .content-section h1 {
+            font-size: 34px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 30px;
+            margin-left: 10px;
+        }
+
+        .content-section p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            margin-left: 10px;
+        }
+
+        .worker-card img {
+            width: 100%;
+            height: 313px;
+            object-fit: cover;
+        }
+
+        .worker-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .worker-card-body {
+            padding: 15px;
+        }
+
+        .worker-card-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #4a148c;
+            margin-bottom: 10px;
+        }
+
+        .worker-card-text {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .request-btn {
+            background-color: #4a148c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .request-btn:hover {
+            background-color: #3e0b78;
+        }
+
+        footer {
+            background-color: #333;
+            color: #ddd;
+        }
+
+        footer a {
+            color: #ddd;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<!-- Navbar & Hero Start -->
+<div class="container-fluid position-relative p-0">
+    <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 sticky-top">
+        <a th:href="@{/}" class="navbar-brand p-0">
+            <h1 class="text-primary"><img th:src="@{/img/logo.png}" alt="Logo"> MR. REPAIR</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a th:href="@{/index}" class="nav-item nav-link">Home</a>
+                <a th:href="@{/about}" class="nav-item nav-link">About</a>
+                <a th:href="@{/service}" class="nav-item nav-link">Services</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Repairier</a>
+                    <div class="dropdown-menu m-0">
+                        <a th:href="@{/electrician}" class="dropdown-item">Electrician</a>
+                        <a th:href="@{/technician}" class="dropdown-item">Technician</a>
+                        <a th:href="@{/plumber}" class="dropdown-item">Plumber</a>
+                        <a th:href="@{/mason}" class="dropdown-item">Mason</a>
+                        <a th:href="@{/painter}" class="dropdown-item">Painter</a>
+                        <a th:href="@{/carpenter}" class="dropdown-item">Carpenter</a>
+                    </div>
+                </div>
+                <a th:href="@{/joinus}" class="nav-item nav-link">Join Us</a>
+            </div>
+            <a th:href="@{/work}" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0">Get Started</a>
+        </div>
+    </nav>
+</div>
+
+<!-- Content Section -->
+<div class="container content-section">
+    <h1>Meet Our Technicians</h1>
+    <p>Our team of highly skilled technicians is here to assist with all your technical needs. From simple repairs to complex installations, our experts are ready to help. Here are some of our top technicians:</p>
+
+    <div class="row">
+        <!-- Technician Card Start -->
+        <div class="col-md-4">
+            <div class="worker-card">
+                <img src="/img/technician1.jpeg" alt="Technician 1">
+                <div class="worker-card-body">
+                    <h3 class="worker-card-title">John Doe</h3>
+                    <p class="worker-card-text"><strong>Experience:</strong> 10 years</p>
+                    <p class="worker-card-text"><strong>Expertise:</strong> General Technical Repairs</p>
+                    <a th:href="@{/reqcallvisit}" class="request-btn">Request a Call/Visit</a>
+                </div>
+            </div>
+        </div>
+        <!-- Technician Card End -->
+
+        <!-- Repeat the above block for each technician, updating the content -->
+        <!-- Technician Card Start -->
+        <div class="col-md-4">
+            <div class="worker-card">
+                <img src="/img/technician2.jpeg" alt="Technician 2">
+                <div class="worker-card-body">
+                    <h3 class="worker-card-title">Jane Smith</h3>
+                    <p class="worker-card-text"><strong>Experience:</strong> 8 years</p>
+                    <p class="worker-card-text"><strong>Expertise:</strong> Electronics and Gadgets</p>
+                    <a th:href="@{/reqcallvisit}" class="request-btn">Request a Call/Visit</a>
+                </div>
+            </div>
+        </div>
+        <!-- Technician Card End -->
+
+        <!-- Technician Card Start -->
+        <div class="col-md-4">
+            <div class="worker-card">
+                <img src="/img/technician3.jpeg" alt="Technician 3">
+                <div class="worker-card-body">
+                    <h3 class="worker-card-title">Michael Brown</h3>
+                    <p class="worker-card-text"><strong>Experience:</strong> 12 years</p>
+                    <p class="worker-card-text"><strong>Expertise:</strong> IT and Network Troubleshooting</p>
+                    <a th:href="@{/reqcallvisit}" class="request-btn">Request a Call/Visit</a>
+                </div>
+            </div>
+        </div>
+        <!-- Technician Card End -->
+
+        <!-- Add more cards as needed -->
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-dark text-muted mt-5">
+    <div class="text-center p-4 text-light">
+        © 2024 MR. REPAIR: All Rights Reserved.
+    </div>
+</footer>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

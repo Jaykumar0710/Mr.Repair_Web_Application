@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('/img/shapes-light.png'); /* Path to your background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        /* General Styles */
+
+
+/* Container Styling */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Section Styling */
+.about-section {
+    margin-bottom: 4rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Heading Styles */
+.about-section h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+/* Paragraph Styles */
+.about-section p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Image Styles */
+.about-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* List Styles */
+.about-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-section ul li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.about-section ul li strong {
+    color: #2c3e50;
+}
+ .hero-image {
+            background-image: url('/img/shapes-light.png'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 400px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-image h1 {
+            font-size: 48px;
+            font-weight: 700;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+<!-- Navbar & Hero Start -->
+<div class="container-fluid position-relative p-0">
+    <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 sticky-top">
+        <a th:href="@{/}" class="navbar-brand p-0">
+            <h1 class="text-primary"><img th:src="@{/img/logo.png}" alt="Logo"> MR. REPAIR</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a th:href="@{/index}" class="nav-item nav-link">Home</a>
+                <a th:href="@{/about}" class="nav-item nav-link">About</a>
+                <a th:href="@{/service}" class="nav-item nav-link">Services</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Repairier</a>
+                    <div class="dropdown-menu m-0">
+                        <a th:href="@{/electrician}" class="dropdown-item">Electrician</a>
+                        <a th:href="@{/technician}" class="dropdown-item">Technician</a>
+                        <a th:href="@{/plumber}" class="dropdown-item">Plumber</a>
+                        <a th:href="@{/mason}" class="dropdown-item">Mason</a>
+                        <a th:href="@{/painter}" class="dropdown-item">Painter</a>
+                        <a th:href="@{/carpenter}" class="dropdown-item">Carpenter</a>
+                    </div>
+                </div>
+                <a th:href="@{/joinus}" class="nav-item nav-link">Join Us</a>
+            </div>
+            <a th:href="@{/work}" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0">Get Started</a>
+        </div>
+    </nav>
+</div>
+<!-- Header Start -->
+<!-- Hero Section -->
+<div class="hero-image">
+    <h1>About Us </h1>
+</div>
+
+<!-- Header End -->
+
+<!-- Navbar & Hero End -->
+
+<!-- About Start -->
+<div class="container my-5">
+<div class="text-center mb-4">
+    <h1>About Us</h1>
+    <p>Mr. Worker - Connecting You to Quality Home Services</p>
+</div>
+
+<!-- Who We Are Section -->
+<section class="about-section">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Who We Are</h2>
+            <p>
+                At Mr. Worker, we believe that finding the right professional for your home repairs should be easy and hassle-free. Our platform brings together a diverse network of experienced and verified workers, ranging from electricians and technicians to plumbers and painters. We take pride in offering a space where skilled professionals can showcase their expertise, while customers can find and hire the right person for the job with just a few clicks.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <img th:src="@{/img/logo.png}" alt="Logo" class="img-fluid">
+        </div>
+    </div>
+</section>
+
+<!-- Our Mission Section -->
+<section class="about-section">
+    <div class="row">
+        <div class="col-md-6">
+            <img th:src="@{/img/logo.png}" alt="Logo" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+            <h2>Our Mission</h2>
+            <p>
+                Our mission is to bridge the gap between customers and workers, ensuring that everyone has access to high-quality, affordable home repair services. We are committed to providing a reliable platform where customers can easily find the help they need, and workers can find consistent opportunities to showcase their skills and grow their businesses.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="about-section">
+    <h2>Why Choose Us?</h2>
+    <ul>
+        <li><strong>Diverse Network of Professionals:</strong> Mr. Worker hosts a wide range of skilled workers, ensuring that whatever your home repair needs may be, we have the right expert for you.</li>
+        <li><strong>Verified Profiles:</strong> All our workers undergo a thorough verification process to ensure they are qualified and trustworthy.</li>
+        <li><strong>Affordable Services:</strong> We believe that quality home repairs shouldn't break the bank. Our platform allows workers to set competitive prices, ensuring you get the best value for your money.</li>
+        <li><strong>Easy to Use:</strong> Our user-friendly platform makes it simple to find and hire professionals quickly and efficiently.</li>
+    </ul>
+</section>
+</div>
+
+<!-- About End -->
+
+<!-- Team Start -->
+<div class="container-fluid team pb-5">
+    <div class="container pb-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <h4 class="text-primary">Our Team</h4>
+            <h1 class="display-5 mb-4">Meet Our Advisers</h1>
+            <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur adipisci facilis cupiditate recusandae aperiam temporibus corporis itaque quis facere, numquam, ad culpa deserunt sint dolorem autem obcaecati, ipsam mollitia hic.
+            </p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="img/team-1.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="team-title">
+                        <h4 class="mb-0">David James</h4>
+                        <p class="mb-0">Profession</p>
+                    </div>
+                    <div class="team-icon">
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-0" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="img/team-2.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="team-title">
+                        <h4 class="mb-0">David James</h4>
+                        <p class="mb-0">Profession</p>
+                    </div>
+                    <div class="team-icon">
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-0" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="img/team-3.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="team-title">
+                        <h4 class="mb-0">David James</h4>
+                        <p class="mb-0">Profession</p>
+                    </div>
+                    <div class="team-icon">
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-0" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="img/team-4.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="team-title">
+                        <h4 class="mb-0">David James</h4>
+                        <p class="mb-0">Profession</p>
+                    </div>
+                    <div class="team-icon">
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-0" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-dark text-muted mt-5">
+    <div class="text-center p-4 text-light">
+        © 2024 MR. REPAIR: All Rights Reserved.
+    </div>
+</footer>
+<!-- Bootstrap JS and dependencies -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

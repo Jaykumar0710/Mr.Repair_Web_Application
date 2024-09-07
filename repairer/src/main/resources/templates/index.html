@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('/img/shapes-light.png'); /* Path to your background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+         .content-section {
+            padding: 0px 0;
+
+        }
+
+        .content-section h1 {
+            font-size: 34px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .content-section p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .content-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .content-section ul li {
+            font-size: 18px;
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .content-section ul li:before {
+            content: "\f058";
+            font-family: 'FontAwesome';
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-size: 18px;
+            top: 3px;
+        }
+
+
+
+        .hero-image {
+            background-image: url('/img/shapes-light.png'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 400px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-image h1 {
+            font-size: 48px;
+            font-weight: 700;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .service-card {
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .service-card h3 {
+            margin-top: 15px;
+            font-size: 24px;
+            font-weight: 700;
+            padding: 0 15px;
+        }
+
+        .service-card p {
+            padding: 0 15px;
+            font-size: 16px;
+            color: #666;
+        }
+
+        .service-card ul {
+            padding: 0 15px;
+            margin-bottom: 15px;
+        }
+
+        .service-card ul li {
+            font-size: 16px;
+        }
+
+        /* Ensure responsiveness */
+        @media (max-width: 768px) {
+            .hero-image h1 {
+                font-size: 36px;
+            }
+
+            .service-card h3 {
+                font-size: 20px;
+            }
+
+            .service-card p, .service-card ul li {
+                font-size: 14px;
+            }
+        }
+        .request-btn {
+            background-color: #4a148c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-left: 50px;
+        }
+        .request-btn:hover {
+            background-color: #3e0b78;
+        }
+    </style>
+</head>
+<body>
+<!-- Navbar & Hero Start -->
+<div class="container-fluid position-relative p-0">
+    <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 sticky-top">
+        <a th:href="@{/}" class="navbar-brand p-0">
+            <h1 class="text-primary"><img th:src="@{/img/logo.png}" alt="Logo"> MR. REPAIR</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a th:href="@{/index}" class="nav-item nav-link ">Home</a>
+                <a th:href="@{/about}" class="nav-item nav-link">About</a>
+                <a th:href="@{/service}" class="nav-item nav-link">Services</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Repairier</a>
+                    <div class="dropdown-menu m-0">
+                        <a th:href="@{/electrician}" class="dropdown-item">Electrician</a>
+                        <a th:href="@{/technician}" class="dropdown-item">Technician</a>
+                        <a th:href="@{/plumber}" class="dropdown-item">Plumber</a>
+                        <a th:href="@{/mason}" class="dropdown-item">Mason</a>
+                        <a th:href="@{/painter}" class="dropdown-item">Painter</a>
+                        <a th:href="@{/carpenter}" class="dropdown-item">Carpenter</a>
+                    </div>
+                </div>
+                <a th:href="@{/joinus}" class="nav-item nav-link">Join Us</a>
+            </div>
+            <a th:href="@{/work}" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0">Get Started</a>
+        </div>
+    </nav>
+</div>
+
+<div class="container-fluid p-0">
+    <div class="hero-section d-flex justify-content-center align-items-center">
+        <div class="overlay">
+            <div class="hero-content text-center text-white">
+                <h1 class="display-4">Welcome to Mr. REPAIR</h1>
+                <p class="lead mb-4">Providing the best quality service to your Sweet Home.</p>
+                <a th:href="@{/work}" class="btn btn-primary rounded-pill px-4 py-2">Get to the Work</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Navbar & Hero End -->
+
+<!-- About Start -->
+<!-- About Start -->
+<div class="container my-5">
+    <div class="text-center mb-4">
+        <h1>About Us</h1>
+        <p>Mr. Worker - Connecting You to Quality Home Services</p>
+    </div>
+
+    <!-- Who We Are Section -->
+    <section class="about-section">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Who We Are</h2>
+                <p>
+                    At Mr. Worker, we believe that finding the right professional for your home repairs should be easy and hassle-free. Our platform brings together a diverse network of experienced and verified workers, ranging from electricians and technicians to plumbers and painters. We take pride in offering a space where skilled professionals can showcase their expertise, while customers can find and hire the right person for the job with just a few clicks.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img th:src="@{/img/logo.png}" alt="Logo" class="img-fluid">
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Mission Section -->
+    <section class="about-section">
+        <div class="row">
+            <div class="col-md-6">
+                <img th:src="@{/img/logo.png}" alt="Logo" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <h2>Our Mission</h2>
+                <p>
+                    Our mission is to bridge the gap between customers and workers, ensuring that everyone has access to high-quality, affordable home repair services. We are committed to providing a reliable platform where customers can easily find the help they need, and workers can find consistent opportunities to showcase their skills and grow their businesses.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+</div>
+
+<!-- About End -->
+<!-- About End -->
+<!-- Services Start -->
+<div class="text-center mb-4">
+    <h1>Our Services</h1>
+    <p>Mr. Worker - Connecting You to Quality Home Services</p>
+</div>
+<div class="container content-section">
+    <h1>Our Service Categories</h1>
+    <div class="row">
+        <!-- Electrician Service -->
+        <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+                <img src="/img/electrician.png" alt="Electrician Service"> <!-- Replace with your image URL -->
+                <h3>Electrician</h3>
+                <p>Our certified electricians are equipped to handle all types of electrical work, ensuring safety and reliability. We offer residential, commercial, and industrial electrical services.</p>
+                <ul>
+                    <li>Residential Electrical Services</li>
+                    <li>Commercial Electrical Services</li>
+                    <li>Industrial Electrical Services</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Technician Service -->
+        <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+                <img src="/img/technician.jpg" alt="Technician Service"> <!-- Replace with your image URL -->
+                <h3>Technician</h3>
+                <p>Our skilled technicians provide a range of services including appliance repairs, installations, and maintenance. We ensure high-quality workmanship and customer satisfaction.</p>
+                <ul>
+                    <li>Appliance Repairs</li>
+                    <li>Installation Services</li>
+                    <li>Maintenance and Support</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Plumber Service -->
+        <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+                <img src="/img/plumber.jpg" alt="Plumber Service"> <!-- Replace with your image URL -->
+                <h3>Plumber</h3>
+                <p>Our experienced plumbers are available for all your plumbing needs, from leaky faucets to major installations. We offer prompt and reliable service for both residential and commercial properties.</p>
+                <ul>
+                    <li>Residential Plumbing</li>
+                    <li>Commercial Plumbing</li>
+                    <li>Emergency Plumbing</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Mason Service -->
+        <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+                <img src="/img/mason.jpg" alt="Mason Service"> <!-- Replace with your image URL -->
+                <h3>Mason</h3>
+                <p>Our masonry services include brickwork, stonework, and concrete work. We handle both small repairs and large construction projects with precision and expertise.</p>
+                <ul>
+                    <li>Brickwork</li>
+                    <li>Stonework</li>
+                    <li>Concrete Work</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Painter Service -->
+        <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+                <img src="/img/painter.jpeg" alt="Painter Service"> <!-- Replace with your image URL -->
+                <h3>Painter</h3>
+                <p>Our professional painters offer high-quality painting services for both interior and exterior projects. We use premium paints and techniques to ensure a flawless finish.</p>
+                <ul>
+                    <li>Interior Painting</li>
+                    <li>Exterior Painting</li>
+                    <li>Custom Finishes</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Carpenter Service -->
+        <div class="col-lg-4 col-md-6">
+            <div class="service-card">
+                <img src="/img/carpenter.jpg" alt="Carpenter Service"> <!-- Replace with your image URL -->
+                <h3>Carpenter</h3>
+                <p>Our carpenters are skilled in custom woodworking, furniture repair, and installation. We provide top-notch craftsmanship for both residential and commercial projects.</p>
+                <ul>
+                    <li>Custom Woodworking</li>
+                    <li>Furniture Repair</li>
+                    <li>Installation Services</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="container-fluid service pb-5">
+    <div class="container pb-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <h4 class="text-primary">Our Services</h4>
+            <h1 class="display-5 mb-4">We Services provided best offer</h1>
+            <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur adipisci facilis cupiditate recusandae aperiam temporibus corporis itaque quis facere, numquam, ad culpa deserunt sint dolorem autem obcaecati, ipsam mollitia hic.
+            </p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="service-item">
+                    <div class="service-img">
+                        <img th:src="@{/img/about-1.jpg}" class="img-fluid rounded-top w-100" alt="Image" src="">
+                    </div>
+                    <div class="rounded-bottom p-4">
+                        <a href="#" class="h4 d-inline-block mb-4"> Strategy Consulting</a>
+                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sint? Excepturi facilis neque nesciunt similique officiis veritatis,
+                        </p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="service-item">
+                    <div class="service-img">
+                        <img th:src="@{/img/about-1.jpg}" class="img-fluid rounded-top w-100" alt="Image">
+                    </div>
+                    <div class="rounded-bottom p-4">
+                        <a href="#" class="h4 d-inline-block mb-4">Financial Advisory</a>
+                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sint? Excepturi facilis neque nesciunt similique officiis veritatis,
+                        </p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="service-item">
+                    <div class="service-img">
+                        <img th:src="@{/img/about-1.jpg}" class="img-fluid rounded-top w-100" alt="Image">
+                    </div>
+                    <div class="rounded-bottom p-4">
+                        <a href="#" class="h4 d-inline-block mb-4">Managements</a>
+                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sint? Excepturi facilis neque nesciunt similique officiis veritatis,
+                        </p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="service-item">
+                    <div class="service-img">
+                        <img th:src="@{/img/about-1.jpg}" class="img-fluid rounded-top w-100" alt="Image">
+                    </div>
+                    <div class="rounded-bottom p-4">
+                        <a href="#" class="h4 d-inline-block mb-4">Supply Optimization</a>
+                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sint? Excepturi facilis neque nesciunt similique officiis veritatis,
+                        </p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="service-item">
+                    <div class="service-img">
+                        <img th:src="@{/img/about-1.jpg}" class="img-fluid rounded-top w-100" alt="Image">
+                    </div>
+                    <div class="rounded-bottom p-4">
+                        <a href="#" class="h4 d-inline-block mb-4">Hr Consulting</a>
+                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sint? Excepturi facilis neque nesciunt similique officiis veritatis,
+                        </p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="service-item">
+                    <div class="service-img">
+                        <img th:src="@{/img/about-1.jpg}" class="img-fluid rounded-top w-100" alt="Image">
+                    </div>
+                    <div class="rounded-bottom p-4">
+                        <a href="#" class="h4 d-inline-block mb-4">Marketing Consulting</a>
+                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sint? Excepturi facilis neque nesciunt similique officiis veritatis,
+                        </p>
+                        <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+<!-- Services End -->
+<!-- Team Start -->
+<div class="container-fluid team pb-5">
+    <div class="container pb-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <h4 class="text-primary">Our Team</h4>
+            <h1 class="display-5 mb-4">Meet Our Advisers</h1>
+            <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur adipisci facilis cupiditate recusandae aperiam temporibus corporis itaque quis facere, numquam, ad culpa deserunt sint dolorem autem obcaecati, ipsam mollitia hic.
+            </p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="img/team-1.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="team-title">
+                        <h4 class="mb-0">David James</h4>
+                        <p class="mb-0">Profession</p>
+                    </div>
+                    <div class="team-icon">
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-0" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="img/team-2.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="team-title">
+                        <h4 class="mb-0">David James</h4>
+                        <p class="mb-0">Profession</p>
+                    </div>
+                    <div class="team-icon">
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-0" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="img/team-3.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="team-title">
+                        <h4 class="mb-0">David James</h4>
+                        <p class="mb-0">Profession</p>
+                    </div>
+                    <div class="team-icon">
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-0" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
+                <div class="team-item">
+                    <div class="team-img">
+                        <img src="img/team-4.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="team-title">
+                        <h4 class="mb-0">David James</h4>
+                        <p class="mb-0">Profession</p>
+                    </div>
+                    <div class="team-icon">
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-primary btn-sm-square rounded-circle me-0" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+<!-- Testimonial Start -->
+<div class="container-fluid testimonial pb-5">
+    <div class="container pb-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <h4 class="text-primary">Testimonial</h4>
+            <h1 class="display-5 mb-4">Our Clients Riviews</h1>
+            <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur adipisci facilis cupiditate recusandae aperiam temporibus corporis itaque quis facere, numquam, ad culpa deserunt sint dolorem autem obcaecati, ipsam mollitia hic.
+            </p>
+        </div>
+        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.2s">
+            <div class="testimonial-item">
+                <div class="testimonial-quote-left">
+                    <i class="fas fa-quote-left fa-2x"></i>
+                </div>
+                <div class="testimonial-img">
+                    <img src="img/testimonial-1.jpg" class="img-fluid" alt="Image">
+                </div>
+                <div class="testimonial-text">
+                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis blanditiis excepturi quisquam temporibus voluptatum reprehenderit culpa, quasi corrupti laborum accusamus.
+                    </p>
+                </div>
+                <div class="testimonial-title">
+                    <div>
+                        <h4 class="mb-0">Person Name</h4>
+                        <p class="mb-0">Profession</p>
+                    </div>
+                    <div class="d-flex text-primary">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-quote-right">
+                    <i class="fas fa-quote-right fa-2x"></i>
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <div class="testimonial-quote-left">
+                    <i class="fas fa-quote-left fa-2x"></i>
+                </div>
+                <div class="testimonial-img">
+                    <img src="img/testimonial-2.jpg" class="img-fluid" alt="Image">
+                </div>
+                <div class="testimonial-text">
+                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis blanditiis excepturi quisquam temporibus voluptatum reprehenderit culpa, quasi corrupti laborum accusamus.
+                    </p>
+                </div>
+                <div class="testimonial-title">
+                    <div>
+                        <h4 class="mb-0">Person Name</h4>
+                        <p class="mb-0">Profession</p>
+                    </div>
+                    <div class="d-flex text-primary">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-quote-right">
+                    <i class="fas fa-quote-right fa-2x"></i>
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <div class="testimonial-quote-left">
+                    <i class="fas fa-quote-left fa-2x"></i>
+                </div>
+                <div class="testimonial-img">
+                    <img src="img/testimonial-3.jpg" class="img-fluid" alt="Image">
+                </div>
+                <div class="testimonial-text">
+                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis blanditiis excepturi quisquam temporibus voluptatum reprehenderit culpa, quasi corrupti laborum accusamus.
+                    </p>
+                </div>
+                <div class="testimonial-title">
+                    <div>
+                        <h4 class="mb-0">Person Name</h4>
+                        <p class="mb-0">Profession</p>
+                    </div>
+                    <div class="d-flex text-primary">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-quote-right">
+                    <i class="fas fa-quote-right fa-2x"></i>
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <div class="testimonial-quote-left">
+                    <i class="fas fa-quote-left fa-2x"></i>
+                </div>
+                <div class="testimonial-img">
+                    <img src="img/testimonial-2.jpg" class="img-fluid" alt="Image">
+                </div>
+                <div class="testimonial-text">
+                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis blanditiis excepturi quisquam temporibus voluptatum reprehenderit culpa, quasi corrupti laborum accusamus.
+                    </p>
+                </div>
+                <div class="testimonial-title">
+                    <div>
+                        <h4 class="mb-0">Person Name</h4>
+                        <p class="mb-0">Profession</p>
+                    </div>
+                    <div class="d-flex text-primary">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-quote-right">
+                    <i class="fas fa-quote-right fa-2x"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
+
+
+
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-dark text-muted mt-5">
+    <div class="text-center p-4 text-light">
+        © 2024 MR. REPAIR: All Rights Reserved.
+    </div>
+</footer>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

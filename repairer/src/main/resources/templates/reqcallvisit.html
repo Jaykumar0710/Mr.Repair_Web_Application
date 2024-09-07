@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us - MR. REPAIR</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+        .content-section {
+            padding: 50px 0;
+            background-color: #fff;
+        }
+
+        .content-section h1 {
+            font-size: 34px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .content-section p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .form-section {
+            padding: 50px 0;
+            background-color: #f8f9fa;
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #4a148c;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .hero-image {
+            background-image: url('/img/shapes-light.png'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 400px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-image h1 {
+            font-size: 48px;
+            font-weight: 700;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            color: #4a148c;
+            margin-bottom: 15px;
+        }
+
+        .feature-item {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .feature-item img {
+            max-width: 100px;
+            margin-bottom: 15px;
+        }
+
+        .form-group textarea {
+            resize: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero-image h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar & Hero Start -->
+<div class="container-fluid position-relative p-0">
+    <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 sticky-top">
+        <a th:href="@{/}" class="navbar-brand p-0">
+            <h1 class="text-primary"><img th:src="@{/img/logo.png}" alt="Logo"> MR. REPAIR</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a th:href="@{/index}" class="nav-item nav-link">Home</a>
+                <a th:href="@{/about}" class="nav-item nav-link">About</a>
+                <a th:href="@{/service}" class="nav-item nav-link">Services</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Repairier</a>
+                    <div class="dropdown-menu m-0">
+                        <a th:href="@{/electrician}" class="dropdown-item">Electrician</a>
+                        <a th:href="@{/technician}" class="dropdown-item">Technician</a>
+                        <a th:href="@{/plumber}" class="dropdown-item">Plumber</a>
+                        <a th:href="@{/mason}" class="dropdown-item">Mason</a>
+                        <a th:href="@{/painter}" class="dropdown-item">Painter</a>
+                        <a th:href="@{/carpenter}" class="dropdown-item">Carpenter</a>
+                    </div>
+                </div>
+                <a th:href="@{/joinus}" class="nav-item nav-link">Join Us</a>
+            </div>
+            <a th:href="@{/work}" class="btn btn-primary rounded-pill py-2 px-4 my-3 my-lg-0">Get Started</a>
+        </div>
+    </nav>
+</div>
+
+<!-- Hero Section -->
+<div class="hero-image">
+    <h1>Request a Call or Visit</h1>
+</div>
+
+<!-- Content Section -->
+<div class="container content-section">
+    <h1>Request a Call or Visit</h1>
+    <p>If you need immediate assistance or wish to schedule a visit from one of our experienced technicians, fill out the form below. Our team will promptly get in touch with you to address your needs.</p>
+    <p>We offer a variety of repair services to suit your requirements. Whether it's electrical issues, plumbing problems, or other repair needs, we're here to help. Just let us know what you need, and we'll take care of the rest.</p>
+    <p>Our team is committed to providing you with the highest level of service. Fill out the form to get started, and we’ll ensure that you receive the best possible support.</p>
+</div>
+
+<!-- Features Section -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 feature-item">
+            <i class="fa fa-phone feature-icon"></i>
+
+            <h3>24/7 Support</h3>
+            <p>We are available around the clock to assist you with any issues or questions you may have.</p>
+        </div>
+        <div class="col-md-4 feature-item">
+            <i class="fa fa-wrench feature-icon"></i>
+
+            <h3>Expert Technicians</h3>
+            <p>Our skilled technicians are trained to handle a wide range of repair services efficiently.</p>
+        </div>
+        <div class="col-md-4 feature-item">
+            <i class="fa fa-calendar-check feature-icon"></i>
+
+            <h3>Flexible Scheduling</h3>
+            <p>We offer flexible scheduling options to ensure that we can meet your repair needs at a convenient time.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Form Section -->
+<div class="container form-section">
+    <div class="form-container">
+        <h2>Request a Call or Visit</h2>
+
+        <div th:if="${message}" class="alert alert-info mt-4" role="alert">
+            <span th:text="${message}"></span>
+        </div>
+
+        <form th:action="@{/reqcallvisit}"  method="post" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-6 form-group mb-3">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                    <label for="service">Service Needed</label>
+                    <select class="form-control" id="service" name="service" required>
+                        <option value="">Select a Service</option>
+                        <option value="electrician">Electrician</option>
+                        <option value="technician">Technician</option>
+                        <option value="plumber">Plumber</option>
+                        <option value="mason">Mason</option>
+                        <option value="painter">Painter</option>
+                        <option value="carpenter">Carpenter</option>
+                    </select>
+                </div>
+                <div class="col-md-12 form-group mb-3">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                </div>
+                <div class="col-md-12 form-group">
+                    <button type="submit" class="btn btn-primary w-100">Submit Request</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Footer Start -->
+
+<!-- Bootstrap JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
